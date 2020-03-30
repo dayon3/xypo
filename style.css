@@ -24,6 +24,8 @@ html {
 
 body {
 	font-family: 'Open Sans', 'Lato', sans-serif;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* adjust width */
@@ -85,10 +87,20 @@ p {
 	padding: 1.8rem 4rem;
 	background: transparent;
 	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-user-select: none;
 	border: 2px solid var(--color-primary);
 	font-weight: bold;
-	cursor: pointer;
+	cursor: default;
 	font-size: 125%;
+	transition: background 0.5s ease;
+}
+
+.common-btn:hover {
+	cursor: pointer;
+	background: var(--color-primary);
 }
 
 .header-text button {
