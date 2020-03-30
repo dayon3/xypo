@@ -19,6 +19,7 @@
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; /* 1rem = 10px */
+	scroll-behavior: smooth;
 }
 
 body {
@@ -310,17 +311,182 @@ form input {
 	outline: none;
 	box-shadow: none;
 	box-sizing: border-box;
-	border: 2px solid var(--color-primary);
+	border: 1px solid var(--color-primary);
 }
 
 .btn-box {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 
 .btn-box button {
 	flex-basis: 48%;
 	padding: 1.8rem 0;
+}
+
+/* Footer */
+#footer {
+	padding: 5rem 0 3rem;
+}
+
+hr {
+	width: 100%;
+	border: 0;
+	border-top: 1px solid var(--color-primary);
+}
+
+.footer-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-left-col {
+	flex-basis: 50%;
+	margin-top: 6rem;
+}
+
+.footer-right-col {
+	flex-basis: 35%;
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.link-title h4 {
+	color: #fab3c4;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+
+.link-title small {
+	font-size: 1.3rem;
+	color: var(--color-grey);
+}
+
+.footer-info {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.footer-logo img {
+	width: 10rem;
+}
+
+.footer-logo button {
+	padding: 1.2rem 3.8rem;
+	margin-top: 2rem;
+	font-size: 1rem;
+}
+
+.copyright-text,
+.footer-logo {
+	flex-basis: 40%;
+}
+
+.copyright-text small {
+	font-size: 1.4rem;
+	color: var(--color-grey-dark);
+}
+
+/* Social Icons */
+.social-icons {
+	width: 5rem;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.social-icons img {
+	display: block;
+	width: 2rem;
+	margin: 0 auto 2rem;
+	cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+	#header {
+		background-image: none;
+	}
+	.container {
+		margin: 0 5rem;
+	}
+	.logo {
+		margin-top: 2.7rem;
+		width: 7rem;
+	}
+	.header-text {
+		margin-top: 10rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	#menu-btn {
+		width: 4rem;
+		right: 5rem;
+	}
+	.common-btn {
+		padding: 1rem 1.6rem;
+		font-size: 110%;
+	}
+	.social-icons img {
+		width: 1.4rem;
+		margin: 1.5rem auto;
+	}
+	.about__left-col,
+	.about__right-col {
+		flex-basis: 100%;
+	}
+	.about__text {
+		margin: 5rem 5rem 0;
+	}
+	.about__text h2 {
+		font-size: 1.8rem;
+	}
+	.feature-col {
+		flex-basis: 100%;
+		margin-bottom: 2rem;
+	}
+	#offer {
+		flex-wrap: wrap-reverse;
+	}
+	.course-left-col {
+		flex-basis: 100%;
+	}
+	.course-right-col {
+		flex-basis: 100%;
+		margin-top: 5rem;
+	}
+	#about,
+	#courses,
+	#offer,
+	#contact {
+		padding: 5rem 0;
+	}
+	.contact-left-col,
+	.contact-right-col {
+		flex-basis: 100%;
+	}
+	.contact-right-col {
+		margin-top: 5rem;
+	}
+	.footer-left-col,
+	.footer-right-col {
+		flex-basis: 100%;
+	}
+	.link-title {
+		flex-basis: 50%;
+		margin-bottom: 3rem;
+	}
 }
